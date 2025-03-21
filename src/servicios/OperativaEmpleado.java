@@ -18,21 +18,21 @@ public class OperativaEmpleado implements OperativaEmpleadoInterfaz {
 
 	@Override
 	public void calcularTotalVentas() {
-		/*
+		
 		System.out.println("Introduzca la fecha en formato (dd-MM-yyyy): ");
-		String fechaFiltro = Inicio.scanner.next();*/
+		String fechaFiltro = Inicio.scanner.next();
 		
 		for(VentaDto venta : Inicio.ventas) {
-			//if(fechaFiltro.equals(venta.getFechaVenta())) {
-				Duration duracion = Duration.between(LocalDateTime.parse(venta.getFechaYHoraApertura()),LocalDateTime.parse(venta.getFechaYHoraVenta()));
+			if(fechaFiltro.equals(venta.getFechaVenta())) {
+				/*Duration duracion = Duration.between(LocalDateTime.parse(venta.getFechaYHoraApertura()),LocalDateTime.parse(venta.getFechaYHoraVenta()));
 				long horas = duracion.toHours();
 				long minutos = duracion.toMinutes();
-				long segundos = duracion.toSeconds();
+				long segundos = duracion.toSeconds();*/
 				
 				System.out.println("Total Ventas: ".concat(Long.toString(venta.getTotalVenta())));
-				System.out.println("Tiempo transcurrido: ".concat(Long.toString(horas)).concat(" horas")
-						.concat(Long.toString(minutos)).concat(" minutos").concat(Long.toString(segundos)).concat(" segundos"));
-			//}
+				//System.out.println("Tiempo transcurrido: ".concat(Long.toString(horas)).concat(" horas")
+					//	.concat(Long.toString(minutos)).concat(" minutos").concat(Long.toString(segundos)).concat(" segundos"));
+			}
 		}
 	}
 
