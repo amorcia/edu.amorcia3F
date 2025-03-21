@@ -1,0 +1,4 @@
+..........
+Venta número: 1
+Euros: 70
+Instante de compra: 21-03-2025
